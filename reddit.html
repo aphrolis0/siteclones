@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Clone</title>
+    <script src="script.js"></script>
+    <style>
+        /* CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f6f6;
+        }
+        header {
+            background-color: #cee3f8;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .post {
+            border: 1px solid #ccc;
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 70%;
+            max-width: 800px;
+            border-radius: 8px;
+        }
+        .post h2 {
+            margin-top: 0;
+        }
+        .post-content {
+            margin-bottom: 15px;
+        }
+        .post-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .comments-section {
+            margin-top: 20px;
+            width: 70%;
+            max-width: 800px;
+        }
+        .comment {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .comment-content {
+            margin-bottom: 5px;
+        }
+        body.dark-mode {
+            background-color: #3d3c3c;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Reddit Clone</h1>
+    </header>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">All</a></li>
+            <li><a href="#">Subreddits</a></li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </nav>
+
+    <main>
+        <div class="post">
+            <h2>Mesajıma görüldü atan agamı İnterpola şikayet ettirip ülkeden deport ettirdiğim için göt deliği miyim?</h2>
+            <p class="post-content">Ben (20F) en yakın arkadaşım ve gelecekteki karı adayı adayım (19.75F?) Sena'ya Çarşamba akşamı gece 3 sularında mesaj atıp beraber kısmetse olur izlemek istediğimi belirttim.
+                Sena haftada 48 saat çalışmak için her gün 6'da kalkıyor ve uykusunu yarıda kesmek yerine 6'da bana görüldü atıp 6.30 da "olr bir tanem" yazmış bende tabi çok sinirlendim ve İnterpole şakasına onun son 10 yıl içerisinde FETÖ okullarıyla olan ilişkisi
+                muhtemel terrör faaliyetleri ve vatan hayinliği suçuyla beraber siber porno suçunu anlatan bir metin attım ve adamlar şakamı bir tıkçık ciddiye alıp Sena'nın dükkanına camdan girdiler duyduğuma göre yaka paça ters kelepçe kimi bulursa götürmüşler.
+                Bir kaç günden beridir cevap vermediğinden kısmetse oluru ne zaman izleyecez bilmiyorum ve bu beni üzüyo:( Arkadaşım Abdullah göt olduğumu söylediğinden böyle bir post atmak istedim.
+                Sizce Sena bu minik şakama kızmış olabilir mi? Şakasına telefonuna konum uygulaması indirmiştim ve Yozgatta telefonu kapanmış gözüküyor
+
+            </p>
+            <div class="post-footer">
+                <small>Posted by meloreis69</small>
+                <div>
+                    <button>Upvote</button>
+                    <button>Downvote</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comment Section -->
+        <div class="comments-section">
+            <h3>Comments</h3>
+        <div class="comment">
+                <p class="comment-content" >YA MAL MELİSA SİKTİR GİT </p>
+                <small>Commented by milfloversena</small>
+                <div class="comment-actions">
+                    <button class="like" onclick="handleLike(this)">Like</button>
+                    <button class="dislike" onclick="handleDislike(this)">Dislike</button>
+                </div>
+                <div class="comment">
+                    <p class="comment-content">sikersen giderim aga (no home)</p>
+                    <small>Commented by meloreis69</small>
+                    <div class="comment">
+                        <p class="comment-content">dm gle</p>
+                        <small>Commented by bettinaschwieger31</small>
+                    <div class="comment">
+                        <p class="comment-content">olr</p>
+                        <small>Commented by milfloversena</small>
+                        <div class="comment">
+                            <p class="comment-content">ay cidden skcne mi? bir öpcük yeter(heycanlandm)</p>
+                            <small>Commented by meloreis69</small>
+            </div>
+        <div class="comment">
+                <p class="comment-content">bence aşık ama naz yapıyor </p>
+                <small>Commented by definetelynotmelo</small>
+            </div>
+        <div class="comment">
+                <p class="comment-content">olm kızı boşver de bizim kupon işini napcaz </p>
+                <small>Commented by gymbroapo</small>
+            </div>
+        <div class="comment">
+                <p class="comment-content">DEME </p>
+                <small>Commented by İBRAHİM</small>
+            </div>
+        <div class="comment">
+                <p class="comment-content">Meraba nasılsınız </p>
+                <small>Commented by chia</small>
+            <div class="comment">
+                    <p class="comment-content">Avrupa senle gurur duyuyor Senacm </p>
+                    <small>Commented by memetonaysupermarketinc</small>
+            </div>
+        </div>
+        <form id="commentForm">
+            <textarea id="newComment" placeholder="Add a comment"></textarea>
+            <button type="submit" onclick="addComment(event)">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <h6>melo inc</h6>
+    </footer>
+</body>
+</html>
